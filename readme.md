@@ -30,20 +30,20 @@ By separating the display of the page's content from the page's image, CW Conten
 * **Category Page Image:** Select which image, if any, to display on the category page.
     * _No Image:_ Do not display an image.
     * _Category Image:_ Display the category image.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
 * **Category Page No Image:** Select which image, if any, to display on the category page if there is no category image.
     * _No Image:_ Do not display an image.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
 * **Article Page Options:** Set the options for this module when renedered on a com_content article page view.
 * **Article Page Image:** Select which image, if any, to display on the article page.
     * _No Image:_ Do not display an image.
     * _Article Image_ Display the full article image.
     * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
 * **Article Page No Image:** Select which image, if any, to display on the article page if there is no full article image.
     * _No Image:_ Do not display an image.
     * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
 * **Tag Page Options:** Set the options for this module when renedered on a com_tags tag page view.
 * **Tag Page Image:** Select which image, if any, to display on the tag page.
     * _No Image:_ Do not display an image.
@@ -51,17 +51,46 @@ By separating the display of the page's content from the page's image, CW Conten
     * _Default image:_ Display the default image set above in the module parameters.
 * **Tag Page No Image:** Select which image, if any, to display on the tag page if there is no tag full image.
     * _No Image:_ Do not display an image.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
+* **Contact Page Options:** Set the options for this module when renedered on a com_contacts contact page view.
+* **Contact Page Image:** Select which image, if any, to display on the contact page.
+    * _No Image:_ Do not display an image.
+    * _Contact Image:_ Display the contact image.
+    * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
+    * _Default image:_ Display the default image set above in the parameters.
+* **Contact Page No Image:** Select which image, if any, to display on the contact page if there is no tag full image.
+    * _No Image:_ Do not display an image.
+    * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
+    * _Default image:_ Display the default image set above in the parameters.
 * **Other Page Options:** Set the options for this module when renedered on all other pages.
 * **Other Pages Image:** Select which image, if any, to display on all other pages.
     * _No Image:_ Do not display an image.
-    * _Default image:_ Display the default image set above in the module parameters.
+    * _Default image:_ Display the default image set above in the parameters.
 
 **Creating a Template Override**
 
 If you want to override the standard layout, you have to create a template override as follows:
 
-1. Copy `/modules/mod_cw_contentimage/default.php` to `/templates/{YOUR_TEMPLATE}/html/mod_cw_contentimage/default.php`
+1. Copy `/modules/mod_cw_contentimage/tmpl/default.php` to `/templates/{YOUR_TEMPLATE}/html/mod_cw_contentimage/default.php`
 2. Modify as needed
 
 _Note: If you want to have multiple template overrides, you can create multiple copies of `default.php`, but give it different names. Each new override will be available in as an option in the Alternate Layout parameter in the Advanced parameter tab in the module._
+
+### [CW Content Image Plugin](https://github.com/corywebbmedia/plg_content_cw_contentimage)
+
+**Add a CW Content Image tag to any page(s) on your site**
+
+1. In the Joomla administrator, go to Extensions > Modules and make sure the CW Content Image plugin is enabled.
+2. Add the tag `{show_image}` to your article anywhere you want to display the content image.
+3. Add the tag `{show_title}` to your article anywhere you want to display the content title.
+
+**Parameters Explained**
+
+The parametes for the CW Content Image plugin are the same as the parameters for the CW Content Image module.
+
+**Creating a Template Override**
+
+If you want to override the standard layout, you have to create a template override as follows:
+
+1. Copy `/plugins/content/cw_contentimage/tmpl/default.php` to `/templates/{YOUR_TEMPLATE}/html/plg_content_cw_contentimage/default.php`
+2. Modify as needed
