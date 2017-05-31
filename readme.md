@@ -28,34 +28,34 @@ By separating the display of the page's content from the page's image, CW Conten
 * **Default Image Alt Text:** Enter text to be included in the img alt attribute if the default image is used.
 * **Category Page Options:** Set the options for this module when renedered on a com_content category page view.
 * **Category Page Image:** Select which image, if any, to display on the category page.
-** No Image: Do not display an image.
-** Category Image: Display the category image.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Category Image:_ Display the category image.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Category Page No Image:** Select which image, if any, to display on the category page if there is no category image.
-** No Image: Do not display an image.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Article Page Options:** Set the options for this module when renedered on a com_content article page view.
 * **Article Page Image:** Select which image, if any, to display on the article page.
-** No Image: Do not display an image.
-** Article Image: Display the full article image.
-** Category Image: Display the category image. If no category image exists, the default image will be displayed.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Article Image_ Display the full article image.
+    * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Article Page No Image:** Select which image, if any, to display on the article page if there is no full article image.
-** No Image: Do not display an image.
-** Category Image: Display the category image. If no category image exists, the default image will be displayed.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Category Image:_ Display the category image. If no category image exists, the default image will be displayed.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Tag Page Options:** Set the options for this module when renedered on a com_tags tag page view.
 * **Tag Page Image:** Select which image, if any, to display on the tag page.
-** No Image: Do not display an image.
-** Tag Image: Display the tag full image.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Tag Image:_ Display the tag full image.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Tag Page No Image:** Select which image, if any, to display on the tag page if there is no tag full image.
-** No Image: Do not display an image.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Default image:_ Display the default image set above in the module parameters.
 * **Other Page Options:** Set the options for this module when renedered on all other pages.
 * **Other Pages Image:** Select which image, if any, to display on all other pages.
-** No Image: Do not display an image.
-** Default image: Display the default image set above in the module parameters.
+    * _No Image:_ Do not display an image.
+    * _Default image:_ Display the default image set above in the module parameters.
 
 **Creating a Template Override**
 
