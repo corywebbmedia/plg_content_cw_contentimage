@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.4" group="content" method="upgrade">
+    <name>plg_cw_contentimage</name>
+    <author>Cory Webb</author>
+    <creationDate>February 2017</creationDate>
+    <copyright>Copyright (C) 2015-2017 Cory Webb Media, LLC. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>joomla@corywebbmedia.com</authorEmail>
+    <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
+    <version>1.1.0</version>
+    <description>PLG_CW_CONTENTIMAGE_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="cw_contentimage">cw_contentimage.php</filename>
+        <folder>helpers</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_content_cw_contentimage.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_cw_contentimage.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="defaultimage" type="media"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_DEFAULTIMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_DEFAULTIMAGE_DESC" />
+                <field name="defaultimage_alt" type="text" default=""
+                    label="PLG_CW_CONTENTIMAGE_FIELD_DEFAULTIMAGE_ALT_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_DEFAULTIMAGE_ALT_DESC" />
+
+                <field name="spacer_hr1" type="spacer" hr="true" />
+
+                <field name="spacer_category" type="spacer"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_SPACER_CATEGORY_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_SPACER_CATEGORY_DESC" />
+                <field name="category_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_IMAGE_DESC"
+                    default="category">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_IMAGE_NONE</option>
+                    <option value="category">PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_IMAGE_CATEGORY</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_IMAGE_DEFAULT</option>
+                </field>
+                <field name="category_no_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_NO_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_NO_IMAGE_DESC"
+                    default="default">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_NO_IMAGE_NONE</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_CATEGORY_NO_IMAGE_DEFAULT</option>
+                </field>
+
+                <field name="spacer_hr2" type="spacer" hr="true" />
+
+                <field name="spacer_article" type="spacer"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_SPACER_ARTICLE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_SPACER_ARTICLE_DESC" />
+                <field name="article_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_DESC"
+                    default="article">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_NONE</option>
+                    <option value="article">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_ARTICLE</option>
+                    <option value="article_intro">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_ARTICLE_INTRO</option>
+                    <option value="category">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_CATEGORY</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_IMAGE_DEFAULT</option>
+                </field>
+                <field name="article_no_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_NO_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_NO_IMAGE_DESC"
+                    default="category">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_NO_IMAGE_NONE</option>
+                    <option value="category">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_NO_IMAGE_CATEGORY</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_ARTICLE_NO_IMAGE_DEFAULT</option>
+                </field>
+
+                <field name="spacer_hr3" type="spacer" hr="true" />
+
+                <field name="spacer_tag" type="spacer"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_SPACER_TAG_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_SPACER_TAG_DESC" />
+                <field name="tag_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_DESC"
+                    default="tag">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_NONE</option>
+                    <option value="tag">PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_TAG</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_DEFAULT</option>
+                </field>
+                <field name="tag_no_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_TAG_NO_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_TAG_NO_IMAGE_DESC"
+                    default="default">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_TAG_NO_IMAGE_NONE</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_TAG_IMAGE_DEFAULT</option>
+                </field>
+
+                <field name="spacer_hr4" type="spacer" hr="true" />
+
+                <field name="spacer_contact" type="spacer"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_SPACER_CONTACT_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_SPACER_CONTACT_DESC" />
+                <field name="contact_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_DESC"
+                    default="article">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_NONE</option>
+                    <option value="contact">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_CONTACT</option>
+                    <option value="category">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_CATEGORY</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_IMAGE_DEFAULT</option>
+                </field>
+                <field name="contact_no_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_CONTACT_NO_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_CONTACT_NO_IMAGE_DESC"
+                    default="category">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_NO_IMAGE_NONE</option>
+                    <option value="category">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_NO_IMAGE_CATEGORY</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_CONTACT_NO_IMAGE_DEFAULT</option>
+                </field>
+
+                <field name="spacer_hr5" type="spacer" hr="true" />
+                
+                <field name="spacer_other" type="spacer"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_SPACER_OTHER_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_SPACER_OTHER_DESC" />
+                <field name="other_image" type="list"
+                    label="PLG_CW_CONTENTIMAGE_FIELD_OTHER_IMAGE_LABEL"
+                    description="PLG_CW_CONTENTIMAGE_FIELD_OTHER_IMAGE_DESC">
+                    <option value="none">PLG_CW_CONTENTIMAGE_FIELD_OTHER_IMAGE_NONE</option>
+                    <option value="default">PLG_CW_CONTENTIMAGE_FIELD_OTHER_IMAGE_DEFAULT</option>
+                </field>
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="text"
+                    default="default"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
