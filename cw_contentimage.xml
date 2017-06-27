@@ -6,8 +6,8 @@
     <copyright>Copyright (C) 2015-2017 Cory Webb Media, LLC. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>joomla@corywebbmedia.com</authorEmail>
-    <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
-    <version>1.1.0</version>
+    <authorUrl>https://cwextensions.com</authorUrl>
+    <version>1.1.1</version>
     <description>PLG_CW_CONTENTIMAGE_XML_DESCRIPTION</description>
 
     <files>
@@ -142,4 +142,8 @@
             </fieldset>
         </fields>
     </config>
+
+    <updateservers>
+        <server type="extension" name="CW Content Image Plugin Updates"><![CDATA[https://cwextensions.com/cw-contentimage-plugin-update-stream/?view=update&dummy=extension.xml]]></server>
+    </updateservers>
 </extension>
